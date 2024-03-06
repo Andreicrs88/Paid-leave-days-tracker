@@ -1,0 +1,11 @@
+.entries-list {
+  list-style: none;
+  padding: 0;
+}
+
+.entries-list-fallback {
+  margin-block: 2rem 1rem;
+  font-size: 23px;
+  font-weight: lighter;
+  text-align: center;
+}
