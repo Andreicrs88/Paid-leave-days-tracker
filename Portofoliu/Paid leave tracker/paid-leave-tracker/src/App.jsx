@@ -11,6 +11,9 @@ import ThemeButton from "components/theme/ThemeButton";
 import styles from "./App.module.css";
 
 export default function App() {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+
   const [filteredYear, setFilteredYear] = useState("2024");
   const entries = useSelector((state) => state.entries.allEntries);
   const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
@@ -34,18 +37,24 @@ export default function App() {
   }
 
   return (
-    <div className={`${styles.wrapper} ${isDarkTheme ? styles.dark : ""}`}>
-      <h1>Paid leave days tracker</h1>
-      <ThemeButton />
-      <NewEntry remainingDays={remainingDays} />
-      <Entries
-        maxPaidLeaveDaysYear={maxPaidLeaveDaysYear}
-        selected={filteredYear}
-        entries={filteredYearEntries}
-        onChangeFilter={changeFilterHandler}
-        remainingDaysColor={remainingDaysColor}
-        remainingDays={remainingDays}
-      />
-    </div>
+    <>
+      <div className={`${styles.wrapper} ${isDarkTheme ? styles.dark : ""}`}>
+        <h1>Paid leave days tracker</h1>
+        <ThemeButton />
+        <NewEntry remainingDays={remainingDays} />
+        <Entries
+          maxPaidLeaveDaysYear={maxPaidLeaveDaysYear}
+          selected={filteredYear}
+          entries={filteredYearEntries}
+          onChangeFilter={changeFilterHandler}
+          remainingDaysColor={remainingDaysColor}
+          remainingDays={remainingDays}
+        />
+      </div>
+      <div className={styles.rights}>
+        <p>Crisan Andrei</p>
+        <p> © {currentYear} Paid leave days tracker™. All rights reserved.</p>
+      </div>
+    </>
   );
 }

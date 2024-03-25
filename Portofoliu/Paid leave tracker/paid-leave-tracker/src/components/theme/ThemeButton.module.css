@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.toggle-theme-btn label:after {
+.toggle-theme-btn label::after {
   content: "";
   position: absolute;
   top: 3.5px;
@@ -58,10 +58,16 @@
   right: 6px;
   font-size: 18px;
   color: rgb(16, 23, 35);
+
+  /* 
+    * without 'pointer-events: none', clicking the icon would not toggle the input
+    * this way, we can click anywhere inside the toggle-theme-btn container to trigger the theme change action
+   */
+  pointer-events: none;
 }
 
 /* dark theme */
-.toggle-theme-btn input:checked ~ label:after {
+.toggle-theme-btn input:checked ~ label::after {
   left: 56px;
   transform: translateX(-100%);
   background-color: rgba(238, 221, 244, 0.7);

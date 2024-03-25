@@ -22,7 +22,10 @@ function ThemeButton() {
 
   return (
     <div className={`${styles["theme-container"]} ${isDarkTheme ? "dark" : ""}`}>
-      <div className={styles["toggle-theme-btn"]}>
+      <div
+        className={styles["toggle-theme-btn"]}
+        onClick={() => {}}
+      >
         <input
           type="checkbox"
           id="dark-mode"
