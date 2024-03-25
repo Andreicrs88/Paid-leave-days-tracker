@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #f7f7f7;
+}
+
+.wrapper h1 {
+  margin-block: 0.4rem 1.4rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #13171a;
+}
+
+.rights {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  color: #fff;
+}
+
+/* dark theme */
+.wrapper.dark {
+  color: #3f3f3f;
+  background-color: rgba(13, 2, 31, 0.8);
+
+  & h1 {
+    color: #fff;
+  }
+}
+
+/* responsive layout properties */
+@media (max-width: 650px) {
+  .wrapper h1 {
+    font-size: 1.8rem;
+    margin-top: 3.5rem;
+  }
+}

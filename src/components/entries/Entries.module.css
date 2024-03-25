@@ -1,0 +1,32 @@
+.entries-container {
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border-width: 1px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #fff;
+  color: #13171a;
+}
+
+.days-remaining-container {
+  margin-bottom: 2rem;
+  font-size: 20px;
+  color: #657582;
+
+  & span {
+    font-size: 25px;
+  }
+}
+
+/* dark theme */
+.entries-container.dark {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(#3d1763, #2b0d49);
+  color: #fff;
+}
+
+.entries-container.dark .days-remaining-container {
+  color: #ddd;
+}
